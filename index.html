@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FluxCut — Modern Clip Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">FluxCut</div>
+    <nav class="nav">
+      <button id="btnUpload" class="btn">Upload</button>
+      <button id="btnClips" class="btn ghost">Clips</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>FluxCut</h1>
+      <p class="lead">Simple, modern UI for managing short clips — built for demo.</p>
+      <div class="actions">
+        <button id="openUploader" class="primary">Upload Clip</button>
+        <button id="refresh" class="secondary">Refresh</button>
+      </div>
+    </section>
+
+    <section id="status" class="status">Backend status: <span id="backendStatus">Checking...</span></section>
+
+    <section id="clips" class="clips-grid"></section>
+  </main>
+
+  <div id="uploader" class="modal hidden">
+    <div class="modal-card">
+      <h3>Upload demo clip</h3>
+      <input id="title" placeholder="Clip title" />
+      <input id="file" type="file" accept="video/*" />
+      <div class="modal-actions">
+        <button id="send" class="primary">Send</button>
+        <button id="close" class="btn ghost">Close</button>
+      </div>
+      <small class="note">This demo uploader posts to /api/upload (mock) — adapt as needed.</small>
+    </div>
+  </div>
+
+  <footer class="footer">Made with ♥ — FluxCut (demo)</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
